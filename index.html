@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2? family=Poppins:ital,wght@0,700; 1,400; 1,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
@@ -16,23 +19,54 @@
   </style>
 </head>
 <body>
-  
-  Day
-  DD
+  <div class="container mx-auto border mt-10">
 
-  Month
-  MM
+    <!-- CARD -->
 
-  Year
-  YYYY
+      <div class="card max-w-sm bg-white overflow-hidden shadow-lg mx-auto mt-4 px-6 py-9">
 
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <!-- INPUT SECTION -->
+
+        <div class="input-sect flex flex-row justify-between items-center">
+          <div class="leftInput">
+            <label for="day" class="text-smokeyGrey block font-medium">DAY</label>
+            <input id="day" placeholder="DD" type="number" class="day border border-lightGrey rounded px-3 py-2 font-bold" min="1" max="31" autofocus>
+            <span id="dayError" class="error"></span>
+          </div>
+          <div>
+            <label for="month" class="text-smokeyGrey block font-medium">MONTH</label>
+            <input id="month" placeholder="MM" type="number" class="month border border-lightGrey rounded px-3 py-2  font-bold" min="1" max="12">
+            <span id="monthError" class="error"></span>
+          </div>
+          <div>
+          <label for="year" class="text-smokeyGrey block font-medium">YEAR</label>
+          <input id="year" placeholder="YYYY" type="number" class="year border border-lightGrey rounded px-3 py-2  font-bold" min="1900" max="2021">
+          <span id="yearError" class="error"></span>
+          </div>
+        </div>
+        
+        <!-- BUTTON -->
+
+        <div class="p-2 relative mt-9">
+          <button id="calculate" class="calculate block mx-auto">
+            <img src="./assets/images/icon-arrow.svg" alt="an svg" class="bg-purple rounded-full px-2 py-2 z-10 relative w-9 h-9">
+          </button>
+          <hr class="absolute w-full border-gray-300 top-1/2 z-0">
+        </div>
+
+        <!-- OUTPUT SECTION -->
+
+        <div class="mt-9">
+          <h1 class="text-4xl font-extrabold italics"><span class="text-purple">--</span>years</h1>
+          <h1 class="text-4xl font-extrabold italics"><span class="text-purple">--</span>months</h1>
+          <h1 class="text-4xl font-extrabold italics"><span class="text-purple">--</span>days</h1>
+        </div>
+        
+      </div>
+
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+      </div>
 </body>
 </html>
